@@ -83,7 +83,7 @@ body::-webkit-scrollbar-thumb {
 
 .mymenu {
     display: none;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .title-right-bar {
@@ -109,7 +109,7 @@ body::-webkit-scrollbar-thumb {
 
 .sidenav .logout-buttom {
     display: none;
-    font-size: 18px;
+    font-size: 20px;
     width: 300px;
 }
 
@@ -118,7 +118,7 @@ body::-webkit-scrollbar-thumb {
         padding-top: 15px;
     }
     .sidenav a {
-        font-size: 10px;
+        font-size: 18px;
     }
 }
 
