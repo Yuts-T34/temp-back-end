@@ -1,0 +1,409 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap');
+* {
+    font-family: 'Prompt', sans-serif;
+}
+
+body {
+    background-color: #F4F6F7;
+    margin: 0;
+}
+
+body::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #6649b8;
+}
+
+
+/* Start Right bar -------------------------------*/
+
+.sidenav {
+    height: 100%;
+    width: 60px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #FFD55E;
+    overflow-x: hidden;
+    transition: 0.2s;
+    padding-top: 60px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+}
+
+.sidenav .mymenu a,
+.logout-buttom {
+    padding: 8px 8px 14px 32px;
+    text-decoration: none;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.mymenu-icon a,
+.logout-buttom-icon {
+    font-size: 30px;
+    padding: 8px 14px 20px;
+    text-decoration: none;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav .mymenu a:hover,
+.mymenu-icon a:hover,
+.logout-buttom-icon:hover,
+.logout-buttom:hover {
+    color: #f1f1f1;
+    background-color: #fcc736;
+}
+
+.sidenav .title-right-bar .closebtn {
+    color: #000;
+    padding: 8px 8px 14px 20px;
+    position: absolute;
+    top: 0;
+    right: 5px;
+    font-size: 32px;
+    display: none;
+}
+
+.sidenav .title-right-bar .openbtn {
+    color: #000;
+    padding: 8px 8px 14px 20px;
+    position: absolute;
+    top: 0;
+    right: 5px;
+    font-size: 32px;
+    display: block;
+}
+
+.mymenu {
+    display: none;
+    font-size: 18px;
+}
+
+.title-right-bar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #FFBD01;
+}
+
+.title-menu-right-bar {
+    top: 0;
+    text-align: center;
+    display: none;
+}
+
+.sidenav .logout-buttom,
+.sidenav .logout-buttom-icon {
+    position: fixed;
+    bottom: 2%;
+    text-decoration: none;
+}
+
+.sidenav .logout-buttom {
+    display: none;
+    font-size: 18px;
+    width: 300px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 10px;
+    }
+}
+
+
+/* End right bar -----------------------------------------------------*/
+
+
+/**/
+
+
+/* Start top-bar------------------------------------------------------*/
+
+.top-bar {
+    top: 0;
+    width: 100%;
+    position: fixed;
+    height: 60px;
+    overflow: hidden;
+    background-color: #FF7A00;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+}
+
+.box {
+    text-align: center;
+    width: 33%;
+    height: fit-content;
+    float: left;
+}
+
+.img-logo-sci {
+    margin-top: 5px;
+    width: 40%;
+}
+
+.img-user {
+    margin-top: 5px;
+    width: 10%;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px solid black;
+}
+
+.box .center-box {
+    font-size: 38px;
+}
+
+.box .right-box {
+    font-size: 30px;
+}
+
+@media screen and (max-width: 1024px) {
+    .box .center-box {
+        font-size: 28px;
+    }
+    .box .right-box {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .box .center-box {
+        font-size: 14px;
+    }
+    .box .right-box {
+        font-size: 12px;
+    }
+}
+
+
+/* End top-bar --------------------------------------------------------*/
+
+
+/**/
+
+
+/* Start content window_update_news.php file. ------------------------------------------------------*/
+
+.content {
+    word-break: break-all;
+    box-sizing: border-box;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.frame-header,
+.frame-news-add {
+    width: 94%;
+    height: fit-content;
+    margin-left: 75px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+}
+
+.frame-header {
+    margin-top: 80px;
+    font-size: 40px;
+    padding-top: 0.7%;
+    padding-left: 18px;
+}
+
+.frame-news-add {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 3%;
+}
+
+.form-group label {
+    font-size: 22px;
+}
+
+#hearder-of-news,
+#details-of-news,
+#date-of-news {
+    border: 1px solid black;
+    font-size: 20px;
+}
+
+.img_size_detail_news {
+    width: 90%;
+    height: 80%;
+    border: 1px solid black;
+}
+
+.form-group_1,
+.form-group_2 {
+    margin-top: 11%;
+}
+
+.btn_choose_img {
+    color: #fff;
+    background-color: #007bff;
+    border: 0px;
+    border-radius: 10px;
+    width: 100%;
+    font-size: 30px;
+    height: fit-content;
+}
+
+.btn_choose_img:hover {
+    background-color: #006bdd;
+}
+
+.btn_add_img {
+    color: #fff;
+    background-color: #28a745;
+    border: 0px;
+    border-radius: 10px;
+    width: 100%;
+    font-size: 30px;
+    height: fit-content;
+}
+
+.btn_add_img:hover {
+    background-color: #23923d;
+}
+
+button[type=submit],
+button[type=reset] {
+    margin-left: 12%;
+    font-size: 25px;
+    width: 30%;
+    border-radius: 20px;
+}
+
+thead,
+tbody {
+    font-size: 17px;
+    text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+    .btn_choose_img,
+    .btn_add_img {
+        font-size: 18px;
+    }
+}
+
+
+/* End content window_update_news.php file. ------------------------------------------------------*/
+
+
+/* Start content window_update_vdo.php file. ------------------------------------------------------*/
+
+.frame-vdos {
+    width: auto;
+    height: fit-content;
+}
+
+.frame-vdos .btn-delete-vdo,
+.btn-delete-banner {
+    width: 100%;
+    font-size: 25px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-color: #dd2d3f;
+    border: solid #dd2d3f;
+    color: white;
+}
+
+.frame-vdos .btn-delete-vdo:hover,
+.btn-delete-banner:hover {
+    background-color: #be2f3d;
+    border: 2.5px solid #ee717d;
+}
+
+
+/* End content window_update_vdo.php file. ------------------------------------------------------*/
+
+
+/* Start content window_update_vdo.php file. ------------------------------------------------------*/
+
+.frame-inside-banner {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.frame-inside-banner .btn_choose_img {
+    margin-top: 10px;
+    width: 90%;
+    background-color: #28B463;
+}
+
+.was-validated .header_banner {
+    font-size: 22px;
+}
+
+.frame-inside-banner .btn_choose_img:hover {
+    background-color: #2a8a52;
+}
+
+
+/* End content window_update_vdo.php file. ------------------------------------------------------*/
+
+
+/* Start content window_dashborad.php file. ------------------------------------------------------*/
+
+.frame-dashborad {
+    width: 94%;
+    height: fit-content;
+    margin-left: 75px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.box-dash-top,
+.box-dash-buttom {
+    width: 100%;
+    border-radius: 10px;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 1%;
+    margin-bottom: 10px;
+    background-color: #fff;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+}
+
+.box-dash-top {
+    height: 150px;
+}
+
+.box-dash-top .frame-number {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.box-dash-top .frame-number .number-of-vdo {
+    font-size: 55px;
+}
+
+.box-dash-buttom {
+    height: 450px;
+}
+
+.box-dash-buttom .frame-dash-buttom {
+    width: 100%;
+    height: 80%;
+    border: 1px solid black;
+}
+
+
+/* End content window_dashborad.php file. ------------------------------------------------------*/
