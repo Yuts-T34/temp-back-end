@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style_backend.css">
+
+    <!-- bootstrap4.5.2 -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+    <!-- Action all -->
+    <script src="./js/action.js"></script>
+
+    <title>ระบบงานบริการวิชาการอัปเดตBanner</title>
+</head>
+
+<body>
+    <!--Start right-bar-->
+    <div id="mySidenav" class="sidenav">
+        <div class="title-right-bar">
+            <label class="title-menu-right-bar" id="title-menu-right">
+                <h2>รายการระบบ</h2>
+            </label>
+
+            <a href="javascript:void(0)" id="open" class="openbtn" onclick="openNav()">
+                <i class="bi bi-chevron-double-right"></i>
+            </a>
+            <a href="javascript:void(0)" id="close" class="closebtn" onclick="closeNav()">
+                <i class="bi bi-chevron-double-left"></i>
+            </a>
+        </div>
+
+        <!-- Start icon-right-bar -->
+        <div id="menu-icon" class="mymenu-icon">
+            <a href="window_dashborad.html"><i class="bi bi-bar-chart-fill"></i></a>
+            <a href="window_update_banner.html"><i class="bi bi-window-sidebar"></i></a>
+            <a href="window_update_news.html"><i class="bi bi-newspaper"></i></a>
+            <a href="window_update_vdo.html"><i class="bi bi-caret-left-square"></i></a>
+        </div>
+        <a href="#" id="logout-icon" class="logout-buttom-icon"><i class="bi bi-box-arrow-in-left"></i></a>
+        <!-- End icon-right-bar -->
+
+        <!-- Start icon-right-bar and Text -->
+        <div id="menu" class="mymenu">
+            <a href="window_dashborad.html"><i class="bi bi-bar-chart-fill"></i> Dashborad</a>
+            <a href="window_update_banner.html"><i class="bi bi-window-sidebar"></i> อัปเดตBanner</a>
+            <a href="window_update_news.html"><i class="bi bi-newspaper"></i> อัปเดตข่าวประชาสัมพันธ์</a>
+            <a href="window_update_vdo.html"><i class="bi bi-caret-left-square"></i> อัปเดตวีดีโอ</a>
+        </div>
+        <a href="#" id="logout" class="logout-buttom"><i class="bi bi-box-arrow-in-left"></i> ออกจากระบบ</a>
+        <!-- End icon-right-bar and Text -->
+    </div>
+    <!--Start right-bar-->
+
+    <!--Start top-bar-->
+    <div class="top-bar">
+
+        <div class="box">
+            <img class="img-logo-sci" src="./img/logo_new.png">
+        </div>
+
+        <div class="box">
+            <label class="center-box">
+                <b>ระบบงานบริการวิชาการ</b>
+            </label>
+        </div>
+
+        <div class="box">
+            <label class="right-box">
+                <img class="img-user" src="./img/user.png">
+                Admin
+            </label>
+        </div>
+
+    </div>
+    <!--End top-bar-->
+
+    <!--Start content-->
+    <div class="content">
+
+        <!-- Start frame-headder -->
+        <div class="frame-header">
+            <label>
+                <b><i class="bi bi-window-sidebar"></i> อัปเดตBanner</b>
+            </label>
+        </div>
+        <!-- End frame-headder -->
+
+        <div class="frame-news-add">
+
+            <div class="frame-inside-banner">
+
+                <form action="" method="get" class="was-validated">
+                    <label for="header_banner" class="header_banner"><b>รูปBanner<span class="text-danger">*</span></b></label>
+                    <hr>
+                    <div class="form-group" style="text-align: center;">
+
+                        <img id="show_image_detail_news" class="img_size_detail_news" src="http://placehold.it/800x500" alt="Upload Image" />
+                        <input type="file" name="image_detail_news" id="image_detail_news" onchange="preview_image(event, this);" accept=".png,.jpg,.jpeg" value="" style="display: none;" />
+
+                        <button class="btn_choose_img" type="button" onclick="choose_img('image_detail_news')">
+                            <i class="bi bi-file-earmark-image"></i> เลือกรูปภาพ Banner
+                        </button>
+                    </div>
+
+                    <hr>
+
+                    <div class="form-group">
+                        <label for="name-canton"><b>ตำบล<span class="text-danger">*</span></b></label>
+                        <input type="text" class="form-control" name="name-canton" id="name-canton" placeholder="ตำบลที่ไปทำโครงการด้วย/ถ้าไม่มีใส่ - " required>
+                        <div class="valid-feedback">ถูกต้อง <i class="bi bi-check2-circle"></i></div>
+                        <div class="invalid-feedback">กรุณากรอกข้อมูลในช่องนี้</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="name-district"><b>อำเภอ<span class="text-danger">*</span></b></label>
+                        <input type="text" class="form-control" name="name-district" id="name-district" placeholder="อำเภอที่ไปทำโครงการด้วย/ถ้าไม่มีใส่ - " required>
+                        <div class="valid-feedback">ถูกต้อง <i class="bi bi-check2-circle"></i></div>
+                        <div class="invalid-feedback">กรุณากรอกข้อมูลในช่องนี้</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="name-province"><b>จังหวัด<span class="text-danger">*</span></b></label>
+                        <input type="text" class="form-control" name="name-province" id="name-province" placeholder="จังหวัดที่ไปทำโครงการด้วย/ถ้าไม่มีใส่ - " required>
+                        <div class="valid-feedback">ถูกต้อง <i class="bi bi-check2-circle"></i></div>
+                        <div class="invalid-feedback">กรุณากรอกข้อมูลในช่องนี้</div>
+                    </div>
+
+                    <hr>
+
+                    <div class="form-group" style="text-align: center;">
+                        <input class="btn btn-primary" type="submit" value="อัปเดท" style="width: 40%; font-size: 25px; margin-right: 5%;">
+                        <input class="btn btn-danger" type="reset" value="ยกเลิก" style="width: 40%; font-size: 25px;">
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+        <!-- End frame-news-add -->
+
+        <div class="frame-news-add">
+
+            <div class="form-group">
+                <label for="Banner-all"><b>Banner ที่มีอยู่ในระบบ</b></label>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-4" style="text-align: center;">
+                        <img src="http://placehold.it/400x300" style="width: 100%; height: 70%; margin-bottom: 10px;">
+                        <h5>ชื่อนะจ๊ะ.png</h5>
+                        <button class="btn-delete-banner">ลบ</button>
+                    </div>
+
+                    <div class="col-sm-4" style="text-align: center;">
+                        <img src="http://placehold.it/400x300" style="width: 100%; height: 70%; margin-bottom: 10px;">
+                        <h5>ชื่อนะจ๊ะ.png</h5>
+                        <button class="btn-delete-banner">ลบ</button>
+                    </div>
+
+                    <div class="col-sm-4" style="text-align: center;">
+                        <img src="http://placehold.it/400x300" style="width: 100%; height: 70%; margin-bottom: 10px;">
+                        <h5>ชื่อนะจ๊ะ.png</h5>
+                        <button class="btn-delete-banner">ลบ</button>
+                    </div>
+
+                    <div class="col-sm-4" style="text-align: center;">
+                        <img src="http://placehold.it/400x300" style="width: 100%; height: 70%; margin-bottom: 10px;">
+                        <h5>ชื่อนะจ๊ะ.png</h5>
+                        <button class="btn-delete-banner">ลบ</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!--End content-->
+</body>
+
+</html>

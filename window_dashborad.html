@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style_backend.css">
+
+    <!-- bootstrap4.5.2 -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+    <!-- Action all -->
+    <script src="./js/action.js"></script>
+
+    <title>ระบบงานบริการวิชาการDashborad</title>
+</head>
+
+<body>
+    <!--Start right-bar-->
+    <div id="mySidenav" class="sidenav">
+        <div class="title-right-bar">
+            <label class="title-menu-right-bar" id="title-menu-right">
+                <h2>รายการระบบ</h2>
+            </label>
+
+            <a href="javascript:void(0)" id="open" class="openbtn" onclick="openNav()">
+                <i class="bi bi-chevron-double-right"></i>
+            </a>
+            <a href="javascript:void(0)" id="close" class="closebtn" onclick="closeNav()">
+                <i class="bi bi-chevron-double-left"></i>
+            </a>
+        </div>
+
+        <!-- Start icon-right-bar -->
+        <div id="menu-icon" class="mymenu-icon">
+            <a href="window_dashborad.html"><i class="bi bi-bar-chart-fill"></i></a>
+            <a href="window_update_banner.html"><i class="bi bi-window-sidebar"></i></a>
+            <a href="window_update_news.html"><i class="bi bi-newspaper"></i></a>
+            <a href="window_update_vdo.html"><i class="bi bi-caret-left-square"></i></a>
+        </div>
+        <a href="#" id="logout-icon" class="logout-buttom-icon"><i class="bi bi-box-arrow-in-left"></i></a>
+        <!-- End icon-right-bar -->
+
+        <!-- Start icon-right-bar and Text -->
+        <div id="menu" class="mymenu">
+            <a href="window_dashborad.html"><i class="bi bi-bar-chart-fill"></i> Dashborad</a>
+            <a href="window_update_banner.html"><i class="bi bi-window-sidebar"></i> อัปเดตBanner</a>
+            <a href="window_update_news.html"><i class="bi bi-newspaper"></i> อัปเดตข่าวประชาสัมพันธ์</a>
+            <a href="window_update_vdo.html"><i class="bi bi-caret-left-square"></i> อัปเดตวีดีโอ</a>
+        </div>
+        <a href="#" id="logout" class="logout-buttom"><i class="bi bi-box-arrow-in-left"></i> ออกจากระบบ</a>
+        <!-- End icon-right-bar and Text -->
+    </div>
+    <!--Start right-bar-->
+
+    <!--Start top-bar-->
+    <div class="top-bar">
+
+        <div class="box">
+            <img class="img-logo-sci" src="./img/logo_new.png">
+        </div>
+
+        <div class="box">
+            <label class="center-box">
+                <b>ระบบงานบริการวิชาการ</b>
+            </label>
+        </div>
+
+        <div class="box">
+            <label class="right-box">
+                <img class="img-user" src="./img/user.png">
+                Admin
+            </label>
+        </div>
+
+    </div>
+    <!--End top-bar-->
+
+    <!--Start content-->
+    <div class="content">
+        <!-- Start frame-headder -->
+        <div class="frame-header">
+            <label>
+                <b><i class="bi bi-bar-chart-fill"></i> Dashborad</b>
+            </label>
+        </div>
+        <!-- End frame-headder -->
+
+        <div class="frame-dashborad">
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="box-dash-top">
+                            <label for="header_numnews" class="header_banner"><b>จำนวนข่าว</b></label>
+                            <div class="frame-number">
+                                <label for="number-of-news" class="number-of-vdo"><b>150</b></label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="box-dash-top">
+                            <label for="header_numvdo" class="header_banner"><b>จำนวนวีดีโอ</b></label>
+                            <div class="frame-number">
+                                <label for="number-of-vdo" class="number-of-vdo"><b>150</b></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="frame-dashborad">
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="box-dash-buttom">
+                            <label for="header_numvdo" class="header_banner"><b>ข่าวที่อัปเดตล่าสุด</b></label>
+                            <hr>
+                            <div class="frame-dash-buttom">
+                                <!-- NEWS new -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="box-dash-buttom">
+                            <label for="header_numvdo" class="header_banner"><b>วีดีโอที่อัปเดตล่าสุด</b></label>
+                            <hr>
+                            <div class="frame-dash-buttom">
+                                <!-- VDO new -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End content-->
+</body>
+
+</html>
